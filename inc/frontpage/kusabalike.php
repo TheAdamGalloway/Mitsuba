@@ -38,7 +38,7 @@ class Frontpage
 		fwrite($handle, $file);
 		fclose($handle);
 		
-		$menu = '<title>Mitsuba Navigation</title>';
+		$menu = '<title>'.$this->config['sitename'].'</title>';
 		$first_default = 1;
 		$styles = $this->conn->query("SELECT * FROM styles ORDER BY `default` DESC");
 		while ($row = $styles->fetch_assoc())
