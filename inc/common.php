@@ -112,6 +112,7 @@ class Common {
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title><?php echo $title; ?></title>
+		<link rel="stylesheet" id="switch" href="./styles/testorange.css">
 		<script type="text/javascript" src="./js/style.js"></script>
 		</head>
 		<body>

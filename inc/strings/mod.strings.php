@@ -106,7 +106,7 @@ $lang['mod/board_allow_replies'] = "Allow replies";
 $lang['mod/board_allow_file_replies'] = "Allow file replies";
 $lang['mod/extensions'] = "Extensions";
 
-$lang['mod/overboard'] = "Overboard";
+$lang['mod/overboard'] = "Overboard (Not Working)";
 $lang['mod/imageboard'] = "Imageboard";
 $lang['mod/fileboard'] = "File listing board";
 $lang['mod/linkboard'] = "Link listing board";
