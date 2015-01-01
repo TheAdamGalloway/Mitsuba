@@ -13,6 +13,10 @@ $mitsuba->admin->ui->checkToken($_POST['token']);
 		{
 			$conn->query("DELETE FROM warnings WHERE seen=1");
 		}
+		if ((!empty($_POST['posts'])) && ($_POST['posts']==1))
+		{
+			$this->mitsuba->common->pruneOld
+		}
 		?>
 <?php $mitsuba->admin->ui->startSection($lang['mod/cleaning_done']); ?>
 
