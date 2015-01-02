@@ -1013,7 +1013,7 @@ while ($row = $styles->fetch_assoc())
 		return time() + $expire;
 	}
 
-	function purgeDeleted {
+	function purgeDeleted () {
 		$this->conn->query("DELETE FROM posts WHERE posts.deleted > 0");
 	}
 }
