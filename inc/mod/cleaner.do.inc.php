@@ -15,7 +15,7 @@ $mitsuba->admin->ui->checkToken($_POST['token']);
 		}
 		if ((!empty($_POST['posts'])) && ($_POST['posts']==1))
 		{
-			$this->mitsuba->common->pruneOld
+			$conn->query("DELETE FROM posts WHERE posts.deleted > 0");
 		}
 		?>
 <?php $mitsuba->admin->ui->startSection($lang['mod/cleaning_done']); ?>

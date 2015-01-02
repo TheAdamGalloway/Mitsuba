@@ -294,7 +294,7 @@ $lang['mod/thumbnails'] = "Thumbnails";
 
 $lang['mod/cleaner'] = "Cleaner";
 $lang['mod/delete_expired_bans'] = "Delete expired bans";
-$lang['mod/delete_expired_bans'] = "Delete deleted posts (database)";
+$lang['mod/delete_deleted_posts'] = "Delete deleted posts (database)";
 $lang['mod/cleaning_done'] = "Cleaning done";
 
 $lang['mod/config_updated'] = "Configuration updated";
