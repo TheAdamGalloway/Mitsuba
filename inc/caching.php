@@ -66,7 +66,7 @@ class Caching
 						}
 				$out .= '
 				<br><h2>Custom board links</h2>
-				<input type="text" value="" name="o_custom_links">
+				<center><input type="text" value="" name="o_custom_links"></center>
 				<div class="btn-wrap">
 					<input type="button" value="Reset" id="settingsReset"/>
 					<input type="button" value="Save" id="settingsSave"/>
@@ -1112,7 +1112,7 @@ if ($(\"#custom_cc\").prop(\"checked\"))
 					$file .= '</div>';
 				}
 			}
-			$file .= '<div style="text-align: center; font-size: x-small!important; padding-bottom: 4px; padding-top: 10px; color: #333;"><span class="absBotDisclaimer">- <a href="http://github.com/MitsubaBBS/Mitsuba" target="_top" rel="nofollow">mitsuba</a> -</span></div>';
+			$file .= '<div style="text-align: center; font-size: x-small!important; padding-bottom: 4px; padding-top: 10px; color: #333;"><span class="absBotDisclaimer">- <a href="http://fourchan.me" target="_top" rel="nofollow">fourchan</a> -</span></div>';
 			$file .= '<div id="bottom"></div>';
 			if ($this->config['enable_meny']==1)
 			{
@@ -1196,10 +1196,10 @@ if ($(\"#custom_cc\").prop(\"checked\"))
 			{
 				if ($first_default == 1)
 				{
-					$file .= '<link rel="stylesheet" id="switch" href="'.$this->mitsuba->getPath($row['path'], "index", $row['relative']).'">';
+					$file .= '<link rel="stylesheet" id="switch" href="http://www.fourchan.me/styles/testorange.css">';
 					$first_default = 0;
 				}
-				$file .= '<link rel="alternate stylesheet" style="text/css" href="'.$this->mitsuba->getPath($row['path'], "index", $row['relative']).'" title="'.$row['name'].'">';
+				$file .= '<link rel="alternate stylesheet" style="text/css" href="http://www.fourchan.me/styles/testorange.css">';
 			}
 			$file .= "
 	<script type='text/javascript' src='./js/style.js'></script>

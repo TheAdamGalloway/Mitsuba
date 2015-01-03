@@ -401,18 +401,7 @@ class Common {
 			if (function_exists("getimagesize")) {
 				$a = getimagesize($path);
 				$image_type = $a[2];
-				if ($image_type == IMAGETYPE_GIF)
-				{
-					$mime = "image/gif";
-				}
-				if ($image_type == IMAGETYPE_PNG)
-				{
-					$mime = "image/png";
-				}
-				if ($image_type == IMAGETYPE_JPEG)
-				{
-					$mime = "image/jpeg";
-				}
+				$mime = image_type_to_mime_type($image_type);
 			} else {
 				return false;
 			}
@@ -421,12 +410,12 @@ class Common {
 		if ($extensions->num_rows == 1)
 		{
 			$ext = $extensions->fetch_assoc();
-			if (($board_files == "%") || (in_array($ext['ext'], explode(",", $board_files))))
+			if (($board_files == "%") || (in_array($ext['ext'], explode(",", $board_files)))) //If the extensions in $board_files are in $ext['ext']
 			{
 				$nfo['extension'] = $ext['ext'];
 				$nfo['image'] = $ext['image'];
 				$nfo['mimetype'] = $mime;
-				return $nfo;
+				return $nfo; //Validates line 294 of imgboard.php
 			} else {
 				return false;
 			}
@@ -440,12 +429,12 @@ class Common {
 		$pw=mb_convert_encoding($pw,'SJIS','UTF-8');
 		$salt=substr($pw.'H.',1,2);
 		$salt=preg_replace('/[^\.-z]/', '.', $salt);
-		$salt=strtr($salt,':;<=>?@[\]^_`','ABCDEFGabcdef');
+		$salt=strtr($salt,':;<=>?@[\]^_`','ABCDEFGabcdefg');
 		$trip=substr(crypt($pw,$salt),-10);
 		return $trip;
 	}
 
-	function mksecuretripcode($pw, $junk = "r3volution")
+	function mksecuretripcode($pw, $junk = "r3v0lution")
 	{
 		global $securetrip_salt;
 		$pw=mb_convert_encoding($pw,'SJIS','UTF-8');
@@ -649,7 +638,7 @@ class Common {
 		$days = -1;
 		}
 		?>
-		<p>You have been <?php if ($left == -1) { echo "<b>permamently</b>"; } ?> <?php if (!empty($bandata['range'])) { echo "<b>range-</b>"; } ?>banned from <b><?php if ($boards == 1) { echo "all "; } else { echo "few "; } ?></b>boards for the following reason:</p>
+		<p>You have been <?php if ($left == -1) { echo "<b>permanently</b>"; } ?> <?php if (!empty($bandata['range'])) { echo "<b>range-</b>"; } ?>banned from <b><?php if ($boards == 1) { echo "all "; } else { echo "few "; } ?></b>boards for the following reason:</p>
 		<p><?php echo $bandata['reason']; ?></p>
 		<p>You were banned on <b><?php echo date("d/m/Y (D) H:i:s", $bandata['created']); ?></b> and your ban expires  
 		<b><?php if ($left != -1) { echo " on ".date("d/m/Y (D) H:i:s", $bandata['expires']).", which is <b>".$left."</b> days from now."; } else { echo " never"; }; ?></b>.</p>
@@ -813,7 +802,7 @@ while ($row = $styles->fetch_assoc())
 				?>
 				<html>
 	<head>
-	<title>Banned</title>
+	<title>Banned ;_;</title>
 <?php
 $first_default = 1;
 $styles = $this->conn->query("SELECT * FROM styles ORDER BY `default` DESC");
@@ -844,7 +833,7 @@ while ($row = $styles->fetch_assoc())
 		$randomImage = $images[array_rand($images)]; 
 		if ($return == 1)
 		{
-			$file .= '<img style="float: right;" src="'.$randomImage.'" alt="Mitsuba" />';
+			$file .= '<img style="float: right;" src="'.$randomImage.'" alt="Warning" />';
 		}
 	}
 	?>

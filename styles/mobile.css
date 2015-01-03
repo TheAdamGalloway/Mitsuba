@@ -13,7 +13,7 @@
 	background: none repeat scroll 0 0 black;
 	border-radius: 14px;
 	color: #fff;
-	content: '\f00d';
+	content: '\274C';
 	font-family: FontAwesome;
 	font-size: 21px;
 	height: 30px;
@@ -83,10 +83,10 @@ video.full-view {width: 750px!important;}
 #menu input[type="checkbox"] + label {cursor:pointer;}
 
 #menu input[type="checkbox"] + label:before {
-  content:"\f096";font-family: FontAwesome;font-size:20px;display:inline-block;width:25px;position:relative;top:3px}
+  content:"\25A2";font-family: FontAwesome;font-size:20px;display:inline-block;width:25px;position:relative;top:3px}
 
 
-#menu input[type="checkbox"]:checked + label:before {content:"\f046";}
+#menu input[type="checkbox"]:checked + label:before {content:"\25A3";}
 
 
 
@@ -127,7 +127,7 @@ video.full-view {width: 750px!important;}
 	}
 
 	.group-options a.settings:after {
-		content:"\f013";
+		content:"\2699";
 		font-family:'FontAwesome';
 		font-size: 18px;
 	}
@@ -221,7 +221,7 @@ video.full-view {width: 750px!important;}
 	#open:after {
 		font-size: 46px;
 		line-height: 40px;
-		content:"\f0c9";
+		content:"\2192";
 	}
 
 	#menu-wrapper {
@@ -276,7 +276,7 @@ video.full-view {width: 750px!important;}
 	}
 
 	a.tab.boards:after {
-		content:"\f07c";
+		content:"\259E";
 	}
 
 	a.tab.watched:after {
@@ -284,7 +284,7 @@ video.full-view {width: 750px!important;}
 	}
 
 	a.tab.settings:after {
-		content:"\f013";
+		content:"\25A4";
 	}
 	
 	#menu-close {
@@ -297,7 +297,7 @@ video.full-view {width: 750px!important;}
 	}
 
 	#menu-close:after {
-		content:"\f00d";
+		content:"\2190";
 		font-size:39px;
 		line-height:35px;
 	}

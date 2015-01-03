@@ -4,10 +4,10 @@ if (localStorage.getItem("firsttime") != 1)
 	localStorage.setItem("firsttime", 1);
 	localStorage.setItem("o_pinned", 1);
 	localStorage.setItem("o_preview", 1);
-	localStorage.setItem("o_loader", 0);
-	localStorage.setItem("o_watched", 0);
-	localStorage.setItem("o_updater", 0);
-	localStorage.setItem("o_imgexpand", 0);
+	localStorage.setItem("o_loader", 1);
+	localStorage.setItem("o_watched", 1);
+	localStorage.setItem("o_updater", 1);
+	localStorage.setItem("o_imgexpand", 1);
 	localStorage.setItem("o_fastreply", 0);
 	localStorage.setItem("o_alt_mobile", 0);
 	localStorage.setItem("o_custom_links", '');
@@ -1161,25 +1161,25 @@ function imgThumbnail(element)
 
 function addExpandAllImg() {
 	if($(".file").length >= 2) {
-		var powiekszone,nigger;
+		var enlarged,arbitrary;
 		$(".post.op").append('<a id="expandAllImages" href="#">[Expand all images]</a>');
 		$("#expandAllImages").click(function()  {
-			if(powiekszone) {
+			if(enlarged) {
 				$(".file > img").each(function(){
 					imgThumbnail($(this));
 				});
-				powiekszone = 0;
+				enlarged = 0;
 				$("#expandAllImages").text("[Expand all images]");
 			} else {
-				nigger = 1;
+				arbitrary = 1;
 				$(".file").each(function(){
-					if(nigger) {
-						nigger--;
+					if(arbitrary) {
+						arbitrary--;
 						return 1;
 					}
 					imgExpand($(this));
 				});
-				powiekszone = 1;
+				enlarged = 1;
 				$("#expandAllImages").text("[Collapse all images]");
 			}
 			return false;

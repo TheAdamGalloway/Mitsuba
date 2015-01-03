@@ -24,7 +24,7 @@ class SimpleCaptcha {
 	public $height = 70;
 
 	/** Dictionary word file (empty for random text) */
-	public $wordsFile = 'words/en.php';
+	public $wordsFile = 'words/eng.php';
 
 	/**
 	 * Path for resource files (fonts, words, etc.)
@@ -33,7 +33,7 @@ class SimpleCaptcha {
 	 * directory to another location outise the web server
 	 *
 	 */
-	public $resourcesPath = 'libs/cool-php-captcha/resources';
+	public $resourcesPath = 'libs/cool-php-captcha/ayylmao';
 
 	/** Min word length (for non-dictionary random text generation) */
 	public $minWordLength = 5;
@@ -44,7 +44,7 @@ class SimpleCaptcha {
 	 * Used for dictionary words indicating the word-length
 	 * for font-size modification purposes
 	 */
-	public $maxWordLength = 8;
+	public $maxWordLength = 9;
 
 	/** Sessionname to store the original text */
 	public $session_var = 'captcha';
@@ -85,7 +85,7 @@ class SimpleCaptcha {
 		'VeraSans' => array('spacing' => -1, 'minSize' => 20, 'maxSize' => 28, 'font' => 'VeraSansBold.ttf'),
 	);
 
-	/** Wave configuracion in X and Y axes */
+	/** Wave configuration in X and Y axes */
 	public $Yperiod    = 12;
 	public $Yamplitude = 14;
 	public $Xperiod    = 11;

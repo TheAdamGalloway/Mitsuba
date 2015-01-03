@@ -46,14 +46,14 @@ $(document).ready(function () {
 
 		var reason = $("input[name=reason]");
 		$("<a href='#' class='lnkSmall'>Proxy</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Proxy"); });
-		$("<a href='#' class='lnkSmall'>Emotki</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Twoje emotki lądują gdzie?"); });
+		$("<a href='#' class='lnkSmall'>Emoticons</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Emoticons"); });
 		$("<a href='#' class='lnkSmall'>Spam</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Spam"); });
 		$("<a href='#' class='lnkSmall'>Flood</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Flood"); });
-		$("<a href='#' class='lnkSmall'>Forsowanie</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Forsowanie"); });
-		$("<a href='#' class='lnkSmall'>Wykop</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Wykop ->"); });
-		$("<a href='#' class='lnkSmall'>Kwejk</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Kwejk ->"); });
+		$("<a href='#' class='lnkSmall'>Doxing</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Doxing"); });
+		$("<a href='#' class='lnkSmall'>Blasphemy</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Blasphemy ->"); });
+		$("<a href='#' class='lnkSmall'>Memes</a> ").insertAfter(reason).before(" ").click(function (event) { event.preventDefault(); reason.val("Memes ->"); });
 
-		$("<a href='#' class='lnkSmall'>Wszystkie poza 4/ i kara/</a>").insertBefore("#boardSelect div:first").after("<br>").click(function (e) {
+		$("<a href='#' class='lnkSmall'>Select All</a>").insertBefore("#boardSelect div:first").after("<br>").click(function (e) {
 			e.preventDefault();
 			$("#boardSelect input[type=checkbox]").prop("checked", false);
 			$("#boardSelect input[type=checkbox]:not([id=4]):not([id=kara])").prop("checked", true); 

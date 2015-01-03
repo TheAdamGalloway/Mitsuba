@@ -28,7 +28,7 @@ $mitsuba->admin->ui->checkToken($_POST['token']);
 				$maxchars = 2000;
 				$pages = 15;
 				$anonymous = "Anonymous";
-				$extensions = "png,jpg,gif";
+				$extensions = "png,jpg,gif,webm";
 				$boards = "";
 				$allow_replies = 0;
 				$file_replies = 0;

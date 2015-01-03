@@ -29,7 +29,7 @@ class Frontpage
 			<frame src="'.$this->config['frontpage_menu_url'].'" id="nav">
 			<frame src="'.$this->config['news_url'].'" name="main" id="main">
 			<noframes>
-			<h1>'.$this->config['sitename'].'</h1>
+			<center><h1>'.$this->config['sitename'].'</h1></center>
 			<p>This page uses frames!</p>
 			</noframes>
 			</frameset>
@@ -38,7 +38,7 @@ class Frontpage
 		fwrite($handle, $file);
 		fclose($handle);
 		
-		$menu = '<title>'.$this->config['sitename'].'</title>';
+		$menu = '<title>FourChan Navigation</title>';
 		$first_default = 1;
 		$styles = $this->conn->query("SELECT * FROM styles ORDER BY `default` DESC");
 		while ($row = $styles->fetch_assoc())

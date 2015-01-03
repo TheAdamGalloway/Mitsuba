@@ -291,9 +291,9 @@ if (!empty($_POST['mode']))
 						$mitsuba->common->showMsg($lang['img/error'], $lang['img/file_too_big']);
 						exit;
 					}
-					if (!($nfo = $mitsuba->common->isFile($_FILES['upfile']['tmp_name'], $bdata['extensions'])))
+					if (!($nfo = $mitsuba->common->isFile($_FILES['upfile']['tmp_name'], $bdata['extensions']))) //References line 389 in common.php
 					{
-						$mitsuba->common->showMsg($lang['img/error'], $lang['img/file_too_big']);
+						$mitsuba->common->showMsg($lang['img/error'], $lang['img/file_not_img']);
 						exit;
 					}
 					$mime = $nfo['mimetype'];
