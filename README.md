@@ -21,7 +21,7 @@ API
 
 The API is at ./`board`/`thread_no`.json
 
-For more info visit [4chan's api](https://github.com/4chan/4chan-API)
+For more info visit [4chan's api](https://github.com/4chan/4chan-API) 
 
 Credits
 -------
