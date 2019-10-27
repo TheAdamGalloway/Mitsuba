@@ -11,4 +11,3 @@ $mitsuba = new Mitsuba($conn);
 $mitsuba->common->banMessage("%");
 $mitsuba->common->warningMessage();
 ?>
-<h1>NOT BANNED</h1>
